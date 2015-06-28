@@ -1,0 +1,117 @@
+.thing-form {
+    margin: 20px 0;
+}
+
+#banner {
+    border-bottom: none;
+    margin-top: -20px;
+}
+
+#banner h1 {
+    font-size: 60px;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+.hero-unit {
+    position: relative;
+    padding: 30px 15px;
+    color: #F5F5F5;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    background: #4393B9;
+}
+
+.footer {
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 70px;
+    border-top: 1px solid #E5E5E5;
+}
+
+
+.deckgrid[deckgrid]::before {
+    /* Specifies that the grid should have a maximum of 4 columns. Each column will have the classes 'column' and 'column-1-4' */
+    content: '4 .column.column-1-4';
+    font-size: 0; /* See https://github.com/akoenig/angular-deckgrid/issues/14#issuecomment-35728861 */
+    visibility: hidden;
+
+}
+
+.deckgrid .column {
+    float: left;
+}
+
+.deckgrid .column-1-4 {
+    background-color:white;
+    width: 25%;
+}
+.deckgrid .column-1-1 {
+    background-color:white;
+    width: 100%;
+}
+
+@media screen and (max-width: 480px){
+    .deckgrid[deckgrid]::before {
+        content: '1 .column.column-1-1';
+    }
+}
+
+.card-description{
+    color:lighten(#000,30%);
+    font-family:Open Sans;
+}
+
+.card-title{
+    font-family: Open Sans, sans-serif;
+    color:lighten(#000,35%);
+    font-size:24px;
+    padding-bottom:2%;
+    border-bottom:1px solid darken(#fff,10%);
+    text-transform:capitalize;
+}
+
+.card-username{
+    font-family: Open Sans, sans-serif;
+    text-transform:capitalize;
+    padding-bottom:2%;
+    border-bottom:8px solid lighten(#ff7744,25%);
+    color:darkGray;
+}
+
+.thumbnail{
+    padding:0%;
+}
+.upvote-details{
+    display:inline-block;
+    padding:1%;
+    border-radius:4px;
+    font-size:16px;
+    background-color:lighten(#ff7744,25%);
+    color:lighten(#ff7744,15%);
+    
+    
+    .count{
+        color:white;
+    }
+}
+
+.comment-details{
+    display:inline-block;
+    padding:1%;
+    border-radius:4px;
+    font-size:16px;
+    background-color:lighten(#ff7744,25%);
+    color:lighten(#ff7744,15%);
+    
+    .count{
+        color:white;
+    }
+
+
+}
+
+
+.recipes-wrapper{
+    background-color:darken(#fff,0.5%);
+}

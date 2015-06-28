@@ -1,0 +1,28 @@
+.comment-username{
+	color:darkGray;
+	margin-bottom:8px;
+}
+
+.comment-body{
+	font-family:Open Sans;
+	margin-bottom:4px;
+}
+
+.comment-body:first-letter{
+	text-transform:capitalize;
+
+}
+.recipe-title{
+	text-transform:capitalize;
+	font-family: Open Sans;
+	display:inline-block;
+}
+
+.recipe-description{
+	font-family:Open Sans;
+	font-size:20px;
+}
+
+.recipe-description:first-letter{
+	text-transform:capitalize;
+}

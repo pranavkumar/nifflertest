@@ -1,0 +1,66 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<div class="col-md-12">
+
+	<div class="col-md-7" style="margin-bottom:2%">
+		
+		<img class="thumbnail" ng-src="{{file.name}}" style="width:100%">
+		<div>
+			<h3 class="recipe-title">{{recipe.title}}</h3>
+			<span style="color:darkGray"> by {{recipe.username}}</span>
+			<span style="color:darkGray">{{recipe.created_at}}</span>
+				
+			<span style="display:inline-block">
+			<span>{{recipe.upvotes}}</span>
+			<button class="btn btn-upvote" ng-click="upvote()"><i class="fa fa-arrow-up"></i></button>&nbsp;
+			<span>{{recipe.downvotes}}</span>
+			<button class="btn btn-downvote" ng-click="downvote()"><i class="fa fa-arrow-down"></i></button>
+			</span>
+			<hr style="margin-bottom:4px;margin-top:4px">
+		</div>
+
+
+		<p class="recipe-description">{{recipe.description}}</p>
+	</div>
+	<div class="col-md-5">
+		<div style="overflow:auto">
+		<span>{{recipe.comments.length}} Comment[s]</span>
+
+		<button class="btn btn-deafult pull-right" ng-show="!adding_comment" ng-click="toggleComment()">Comment</button>
+		<button class="btn btn-deafult pull-right" ng-show="adding_comment" ng-click="toggleComment()">Cancel</button>
+		
+		</div>
+		
+		<div  class="" ng-show="adding_comment">
+			<form name="commentForm" ng-submit="addcomment(commentForm)">
+				
+				<div class="form-group">
+					 <label for="username" class="normal">Username*</label>
+					<input type="text" class="form-control" id="username" placeholder="Your Good Name" ng-model="comment.username" name="commentUsername">
+				</div>
+				<div class="form-group">
+					 <label for="body" class="normal">Comment*</label>
+					<textarea class="form-control" rows="3" id="body" placeholder="write something clever" ng-model="comment.body" name="commentBody"></textarea>
+				</div>
+				
+				<button type="submit" class="btn btn-primary">Post</button>
+
+				
+			</form>
+		</div>
+		<br>
+		<div>
+			<ul class="list-unstyled">
+				<li ng-repeat="comment in recipe.comments track by $index">
+					
+					<p class="comment-body"><i class="fa fa-comment"></i>&nbsp;{{comment.body}}</p>
+					<p class="comment-username">{{comment.username}}</p>
+				</li>
+			</ul>
+		</div>
+
+
+	</div>
+
+
+</div>
