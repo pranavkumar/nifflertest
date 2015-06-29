@@ -1,5 +1,5 @@
 # nifflertest
-Responsive recipebook using MEAN stack using Angular-fullstack
+Responsive recipebook using Angular-fullstack
 
 <h3>Clone the repo</h3>
 <pre>$ git clone git@github.com:pranavkumar/nifflertest.git</pre>
